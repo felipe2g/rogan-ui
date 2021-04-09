@@ -1,0 +1,35 @@
+import {Meta, Story, Preview, Props} from '@storybook/addon-docs/blocks'
+import { withKnobs, text, number, boolean } from "@storybook/addon-knobs";
+
+import { UIImage } from './UIImage'
+
+<Meta title="Components/UIImage" component={ UIImage } />
+
+# Button
+
+This is the `UIImage`
+
+```jsx
+import { UIImage } from 'ui-start'
+```
+
+<Preview withSource="open">
+    <Story name="UIImage">
+        <UIImage width="30%" height="initial" url="http://www.fillmurray.com/g/200/300" alt="image" />
+    </Story>
+</Preview>
+
+## Props
+
+## Code playground
+
+<Preview withToolbar>
+    <Story name="UIImage sandbox">
+        <UIImage 
+            url={text("url", "http://www.fillmurray.com/g/200/300")}
+            width={text("width", "100%")}
+            height={text("height", "initial")}/>
+    </Story>
+</Preview>
+
+<Props of={ UIImage } />

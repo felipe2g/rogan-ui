@@ -1,0 +1,51 @@
+import {Meta, Story, Preview, Props} from '@storybook/addon-docs/blocks'
+import { withKnobs, text, number, boolean } from "@storybook/addon-knobs";
+
+import { Container } from './Container'
+
+<Meta title="Components/Container" component={ Container } />
+
+# Button
+
+This is the `Container`
+
+```jsx
+import { Container } from 'ui-start'
+```
+
+<Preview withSource="open">
+    <Story name="Container">
+        <Container>Content text</Container>
+    </Story>
+</Preview>
+
+## Props
+
+## Code playground
+
+<Preview withToolbar>
+    <Story name="Container sandbox">
+        <Container 
+            padding={number("padding", 24)}
+            paddingLeft={number("paddingLeft", 24)}
+            paddingRight={number("paddingRight", 24)}
+            backgroundColor={text("backgroundColor", "#333")}
+            color={text("color", "white")}
+            width={text("width", "50%")}
+            height={text("height", "300px")}
+            boxShadow={boolean("boxShadow", false)}
+            fontFamily={text("fontFamily", "tahoma")}
+            center={boolean("center", false)}
+            centerHorizontal={boolean("centerHorizontal", false)}
+            centerVertical={boolean("centerVertical", false)}
+            border={text("border", "small")}
+            borderRadius={number("borderRadius", 10)}
+            borderColor={text("borderColor", "red")}
+            minHeight={text("minHeight", "100px")}
+            horizontalCenterMobile={boolean("horizontalCenterMobile", true)}>
+            Content text
+        </Container>
+    </Story>
+</Preview>
+
+<Props of={ Container } />

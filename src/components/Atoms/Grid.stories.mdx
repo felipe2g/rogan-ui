@@ -1,0 +1,48 @@
+import {Meta, Story, Preview, Props} from '@storybook/addon-docs/blocks';
+import { withKnobs, text, number, boolean } from "@storybook/addon-knobs";
+
+import { Grid } from './Grid'
+
+<Meta title="Components/Grid" component={Grid} />
+
+# Grid
+
+This is the `Grid`
+
+```jsx
+import { Grid } from 'ui-start'
+```
+
+<Preview withSource="open">
+  <Story name="Grid">
+    <Grid wrap={true} columns={3} mobileColumns={2}>
+      <p>Content</p>
+      <p>Content</p>
+      <p>Content</p>
+    </Grid>
+  </Story>
+</Preview>
+
+## Code playground
+
+<Preview withToolbar>
+  <Story name="Grid sandbox">
+    <Grid 
+      wrap={boolean("wrap", true)}
+      columns={number("columns", 3)} 
+      mobileColumns={number("mobileColumns", 2)}>
+      <p>Content</p>
+      <p>Content</p>
+      <p>Content</p>
+      <p>Content</p>
+      <p>Content</p>
+      <p>Content</p>
+    </Grid>
+  </Story>
+</Preview>
+
+## Props
+
+<Props of={Grid} />
+
+## Using different Prop Name

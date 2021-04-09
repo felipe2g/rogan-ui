@@ -1,0 +1,40 @@
+import {Meta, Story, Preview, Props} from '@storybook/addon-docs/blocks'
+import { withKnobs, text, number, boolean } from "@storybook/addon-knobs";
+
+import { AVConcertCard } from './AVConcertCard'
+
+<Meta title="Components/AVConcertCard" component={ AVConcertCard } />
+
+# Button
+
+This is the `AVConcertCard`
+
+```jsx
+import { AVConcertCard } from 'ui-start'
+```
+
+<Preview withSource="open">
+    <Story name="AVConcertCard">
+        <AVConcertCard 
+            text="Come see us headline one of the worlds first ever fully net zero festivals Come see us headline one of the worlds first ever fully net zero festivals"
+            image="http://www.fillmurray.com/g/300/300" 
+            title="Festival net zero - Coventry, The MTC, 22/06/21" />
+    </Story>
+</Preview>
+
+## Props
+
+## Code playground
+
+<Preview withToolbar>
+    <Story name="AVConcertCard sandbox">
+        <AVConcertCard 
+            text={text("text", "Hello world")}
+            title={text("title", "Hello world")}
+            image={text("image", "http://www.fillmurray.com/g/300/300")}
+            color={text("color", "white")}
+            font={text("font", "impact")}/>
+    </Story>
+</Preview>
+
+<Props of={ AVConcertCard } />

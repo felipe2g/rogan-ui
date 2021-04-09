@@ -1,0 +1,47 @@
+import {Meta, Story, Preview, Props} from '@storybook/addon-docs/blocks'
+import { withKnobs, text, number, boolean } from "@storybook/addon-knobs";
+
+import { UIHeader } from './Header'
+
+<Meta title="Components/Header" component={ UIHeader } />
+
+# Button
+
+This is the `Header`
+
+```jsx
+import { UIHeader } from 'ui-start'
+```
+##Italic and bold
+<Preview withSource="open">
+    <Story name="Header">
+        <div>
+         <UIHeader level={1}>H1 Header</UIHeader>
+         <UIHeader level={2}>H2 Header</UIHeader>
+         <UIHeader level={3}>H3 Header</UIHeader>
+         <UIHeader level={4}>H4 Header</UIHeader>
+         <UIHeader level={5}>H5 Header</UIHeader>
+         <UIHeader level={6}>H6 Header</UIHeader>
+        </div>
+    </Story>
+</Preview>
+
+## Props
+
+## Code playground
+
+<Preview withToolbar>
+  <Story name="Header sandbox">
+    <UIHeader
+        level={number("level", 3)}
+        fontFamily={text("fontFamily", "tahoma")} 
+        color={text("color", "black")} 
+        italic={boolean("italic", false)} 
+        fontWeight={number("fontWeight", 300)}
+        fontSize={number("fontSize", 50)}
+        mobileFontSize={number("mobileFontSize", 50)}
+        letterSpacing={number("letterSpacing", 4)}>Hello world</UIHeader>
+  </Story>
+</Preview>
+
+<Props of={ UIHeader } />

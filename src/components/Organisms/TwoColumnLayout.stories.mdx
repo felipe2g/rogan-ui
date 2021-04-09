@@ -1,0 +1,35 @@
+import {Meta, Story, Preview, Props} from '@storybook/addon-docs/blocks'
+import { withKnobs, text, number, boolean } from "@storybook/addon-knobs";
+
+import { TwoColumnLayout } from './TwoColumnLayout'
+
+<Meta title="Components/TwoColumnLayout" component={ TwoColumnLayout } />
+
+# Button
+
+This is the `TwoColumnLayout`
+
+```jsx
+import { TwoColumnLayout } from 'ui-start'
+```
+
+<Preview withSource="open">
+    <Story name="TwoColumnLayout">
+        <TwoColumnLayout leftFlexBasis={20} rightFlexBasis={80} title="title" headerFontSize={50} mobileHeaderFontSize={35} font="impact" titleColor="red" titleLetterSpacing={9}>Hello world</TwoColumnLayout>);
+    </Story>
+    <Story name="TwoColumnLayout with image">
+        <TwoColumnLayout leftFlexBasis={40} rightFlexBasis={60} image="http://www.fillmurray.com/300/300" imageHeight="100px" mobileImageHeight="50px">Hello world</TwoColumnLayout>);
+    </Story>
+</Preview>
+
+## Props
+
+## Code playground
+
+<Preview withToolbar>
+    <Story name="TwoColumnLayout sandbox">
+        <TwoColumnLayout font="impact" leftFlexBasis={50} rightFlexBasis={50} children={<p>Hello World</p>} />);
+    </Story>
+</Preview>
+
+<Props of={ TwoColumnLayout } />

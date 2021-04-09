@@ -1,0 +1,43 @@
+import {Meta, Story, Preview, Props} from '@storybook/addon-docs/blocks'
+import { withKnobs, text, number, boolean } from "@storybook/addon-knobs";
+
+import { Copy } from './Copy'
+
+<Meta title="Components/Copy" component={ Copy } />
+
+# Button
+
+This is the `Copy`
+
+```jsx
+import { Copy } from 'ui-start'
+```
+
+<Preview withSource="open">
+    <Story name="Copy">
+        <Copy>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        </Copy>
+    </Story>
+</Preview>
+
+## Props
+
+## Code playground
+
+<Preview withToolbar>
+  <Story name="Copy sandbox">
+    <Copy
+        fontFamily={text("fontFamily", "tahoma")} 
+        color={text("color", "black")} 
+        italic={boolean("italic", false)} 
+        fontWeight={number("fontWeight", 300)}
+        fontSize={number("fontSize", 14)}
+        letterSpacing={number("letterSpacing", 4)}
+        lineHeight={number("lineHeight", 20)}>
+            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+    </Copy>
+  </Story>
+</Preview>
+
+<Props of={ Copy } />

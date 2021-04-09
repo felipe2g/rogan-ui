@@ -1,0 +1,41 @@
+import {Meta, Story, Preview, Props} from '@storybook/addon-docs/blocks'
+import { withKnobs, text, number, boolean } from "@storybook/addon-knobs";
+
+import { Spacer } from './Spacer'
+
+<Meta title="Components/Spacer" component={ Spacer } />
+
+# Button
+
+This is the `Spacer`
+
+```jsx
+import { Spacer } from 'ui-start'
+```
+
+<Preview withSource="open">
+    <Story name="Spacer">
+        <div>
+            <p>Some text</p>
+            <Spacer height={24} />
+            <p>Some more text</p>
+        </div>
+    </Story>
+</Preview>
+
+## Props
+
+## Code playground
+
+<Preview withToolbar>
+    <Story name="Spacer sandbox">
+        <div>
+            <p>Some text</p>
+            <Spacer 
+                height={number("height", 24)}/>
+            <p>Some more text</p>
+        </div>
+    </Story>
+</Preview>
+
+<Props of={ Spacer } />

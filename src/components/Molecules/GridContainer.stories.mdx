@@ -1,0 +1,37 @@
+import {Meta, Story, Preview, Props} from '@storybook/addon-docs/blocks'
+import { withKnobs, text, number, boolean } from "@storybook/addon-knobs";
+
+import { GridContainer } from './GridContainer'
+import { Grid } from '../Atoms/Grid'
+
+<Meta title="Components/GridContainer" component={ GridContainer } />
+
+# Button
+
+This is the `GridContainer`
+
+```jsx
+import { GridContainer } from 'ui-start'
+```
+
+<Preview withSource="open">
+    <Story name="GridContainer">
+        <GridContainer>Hello world</GridContainer>
+    </Story>
+</Preview>
+
+## Props
+
+## Code playground
+
+<Preview withToolbar>
+    <Story name="GridContainer sandbox">
+        <Grid wrap columns={3}>
+            <GridContainer order={3} flexBasis={50}>Container 1</GridContainer>
+            <GridContainer order={2} flexBasis={25}>Container 2</GridContainer>
+            <GridContainer order={1} flexBasis={25}>Container 3</GridContainer>
+        </Grid>
+    </Story>
+</Preview>
+
+<Props of={ GridContainer } />
