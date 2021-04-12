@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { ExampleComponent } from 'rogan-ui'
+import { Comment } from 'rogan-ui'
 import 'rogan-ui/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return <Comment text="Um comentário de teste" />
 }
 
 export default App
