@@ -5,8 +5,12 @@ interface Props {
   text: string
 }
 
-const Comment = ({ text }: Props) => {
-  return <S.Comment>{text}</S.Comment>
+const Comment: React.FC<Props> = ({ text }) => {
+  return (
+    <S.Comment>
+      <span>{text}</span>
+    </S.Comment>
+  )
 }
 
 export default Comment
