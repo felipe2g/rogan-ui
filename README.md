@@ -25,6 +25,16 @@ class Example extends Component {
 }
 ```
 
+## Starting Storybook
+```bash
+yarn storybook
+```
+
+## Creating a component
+```bash
+yarn generate ComponentName
+```
+
 ## License
 
 MIT © [felipe2g](https://github.com/felipe2g)
